@@ -43,13 +43,10 @@ services:
 #      - rabbit
     env_file:
       - .env
-    environment:
-      XDEBUG_CONFIG: "remote_host=192.168.220.1"
-      PHP_IDE_CONFIG: "serverName=Docker"
     networks:
       - internal
     extra_hosts:
-      - "dockerhost:$DOCKERHOST"
+      - "dockerhost:${DOCKERHOST}"
 
   postgres:
     container_name: ${PROJECT_NAME}-postgres
@@ -114,4 +111,4 @@ networks:
     ipam:
       driver: default
       config:
-        - subnet: 192.168.220.0/28
+        - subnet: ${PROJECT_SUBNET}

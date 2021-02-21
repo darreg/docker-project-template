@@ -1,6 +1,5 @@
 Start
 
-    source ./dockerhost.sh
     make start
 
 Stop
