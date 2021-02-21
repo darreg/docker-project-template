@@ -1,22 +1,23 @@
 Start
 
     make start
+    For the first launch, you need to use the "cp .env.dist .env" command
 
 Stop
 
     make stop
 
-PHP
+Enter to PHP container
 
     make php
 
-Redis-cli
+Enter to Redis container
 
     make redis
 
-Url
+Link to the site
 
-    With /etc/hosts file
     http://PROJECT_NAME.local
+    Don't forget to add this to the /etc/hosts file
 
 
