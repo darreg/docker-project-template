@@ -1,3 +1,12 @@
+Containers
+
+    Nginx
+    PHP 7.4
+    Redis
+    PostgreSql 12
+    RabbitMQ 3.6.6
+    Mailhog
+
 Start
 
     make start
