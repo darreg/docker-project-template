@@ -24,6 +24,7 @@ services:
 
   php-fpm:
     container_name: ${PROJECT_NAME}-php-fpm
+    user: "${USER_ID}:${GROUP_ID}"
     build:
       context: ./docker/php-fpm
       args:
@@ -48,8 +49,6 @@ services:
       PHP_IDE_CONFIG: serverName=${XDEBUG_IDE_SERVER_NAME}
     networks:
       - internal
-    extra_hosts:
-      - dockerhost:${DOCKERHOST}
 
   postgres:
     container_name: ${PROJECT_NAME}-postgres
