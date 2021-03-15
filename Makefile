@@ -15,4 +15,4 @@ php:
 	docker exec -it --user www-data $(PROJECT_NAME)-php-fpm bash
 
 composer:
-	docker-compose run --rm $(PROJECT_NAME)-php-fpm composer
+	docker-compose run --rm php-fpm composer
